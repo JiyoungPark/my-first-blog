@@ -9,18 +9,16 @@
 
         <div>
             
-            <h2><a href="">my first post</a></h2>
-            <p>published : 2018.07.21</p>
-            <p>수민이 안녕</p>
-            <p>It works!</br></br></p>
+            {% for post in posts %}
+                <div>
+                    <p>published: {{post.published_date}}</p>
+                    <h2><a href=''>{{post.title}}</a></h2>
+                    <p>{{post.text|linebreaksbr }}</p>
+                </div>          
+            {% endfor %}
         </div>
 
-        <div>
-            
-            <h2><a href="">my Second post</a></h2>
-            <p>published : 2018.07.21</p>
-            <p></p>
-            <p>It works!</p>
-        </div>
+
+      
     </body>
 </html>
